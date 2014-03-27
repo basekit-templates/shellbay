@@ -1,4 +1,5 @@
-Shell Bay
-====
 
-BaseKit Menu Template
+Wisconsin
+========
+
+Wisconsin menu template
