@@ -8,6 +8,8 @@ Table of Contents -
   4. Header
   5. Menu
   6. Footer
+  12. Feature
+  Custom CSS
 
 */
 
@@ -18,8 +20,6 @@ Table of Contents -
 @import "@{templateCommon}/basekit-bootstrap.less";
 
 body {
-    background-color: @color-swatch2;
-    background-image: image('/images/white_wall.png');
     font-family:@font-swatch5-font-family;
     margin: 0;
     padding: 0;
@@ -47,7 +47,7 @@ h5 {
    =============================== */
 
 @desktop: ~"only screen and (max-width: 1024px)";
-@tablet: ~"only screen and (max-width: 800px)";
+@tablet: ~"only screen and (max-width: 1024px)";
 @mobile: ~"only screen and (max-width: 640px)";
 
 /* ===============================
@@ -94,8 +94,8 @@ h5 {
 }
 .nine, .row .nine { 
     position: relative;
-    max-width: 1200px;
-    width: 70%; 
+    width: 80%;
+    float:right; 
     &:after {
         content: "";
         width: 100%;
@@ -123,14 +123,14 @@ h5 {
    =============================== */
 
 .bk-header {
-    background-color: @color-swatch6;
+    background-color: @color-swatch5;
     height: 100%;
     overflow-x: scroll;
-    padding: 2em 0;
+    padding: 5em 1.5em;
     position: fixed;
     text-align: center;
     min-width: 200px;
-    width: 25%;
+    width: 20%;
     z-index: 9999;
     @media @tablet {
         padding-bottom: 0;
@@ -198,7 +198,6 @@ nav {
                     /* Then these styles are applied */
                     width: 100%;
                     background-color: lighten(@color-swatch5, 10%);
-                    border-bottom: 1px solid fade(@color-swatch7, 10%);
                     margin: 0;
                     padding: 60px 0 0;
                 }
@@ -209,15 +208,14 @@ nav {
                     width: 100%;
                     text-align: center;
                     @media @tablet {
-                        background-color: @color-swatch6;
+                        background-color: @color-swatch5;
                         color: @color-swatch7;
                         width: 100%;
                         padding: 0;
-                        border-bottom: 1px solid fade(@color-swatch7, 5%);
+                        border:0;
                     }
                     &:last-child {
                         @media @tablet {
-                            border-bottom: 1px solid fade(@color-swatch5, 25%);
                         }
                     }
 
@@ -225,8 +223,7 @@ nav {
                         ul {
                             display: block;
                             position: absolute;
-                            background-color: fade(@color-swatch1, 90%);
-                            border: 1px solid fade(@color-swatch5, 25%);
+                            background-color: lighten(@color-swatch5, 90%);
                             color: @color-swatch5;
                             z-index: 9999;
                             padding: 0;
@@ -261,7 +258,7 @@ nav {
                         letter-spacing: @font-swatch6-letter-spacing;
                         text-align: center;
                         &:hover {
-                            background: lighten(@color-swatch6, 3%);
+                            background: lighten(@color-swatch5, 10%);
                             color: @color-swatch1;
                         }
                     }
@@ -283,7 +280,7 @@ nav {
                             position: relative;
                             text-align: center;
                             &:hover {
-                                background: lighten(@color-swatch6, 3%);
+                                background: lighten(@color-swatch5, 10%);
                                 color: @color-swatch1;
                                 text-decoration: none;
                             }
@@ -313,10 +310,9 @@ nav {
                                 left: 0;
                             }
                             li {
-                                background: lighten(@color-swatch6, 3%);
+                                background: @color-swatch5;
                                 border-right: none;
                                 border-left: none;
-                                border-top: 1px solid darken(@color-swatch4, 5%);
                                 margin-right: 0;
                                 a {
                                     &:hover {
@@ -358,9 +354,9 @@ nav {
                             content :"";
                             position: absolute;
                             height: 3px;
-                            right: 20px;
-                            top: 22px;
+                            right: auto;
                             width: 25px;
+                            margin-left:-10px;
                         }
                    }
                }
@@ -374,20 +370,20 @@ nav {
     ul {
         display: block;
         list-style: none;
-        padding: 1em 0 0.5em 0;
+        padding: 2.5em 0 0 0;
         margin: 0;
         max-width: 100%;
         text-align: center;
-        @media @desktop {
+        @media @tablet{
             width: 100%;
-            margin: 10px 0 20px;
+            margin: 0 0 0 0;
+            padding: 1em 0 0 0;
         }
         li {
             padding: 0.8em 0;
             margin: 0;
             @media @tablet {
-                padding: 1.25em 0 1em;
-                border-bottom: 1px solid fade(@color-swatch5, 25%);
+                padding: 0.8em 0 1em;
                 width: 100%;
                 margin: 0;
             }
@@ -439,15 +435,14 @@ nav {
 
 div[role="main"] {
     background-color: @color-swatch1;
-    margin: 3em 0;
-    padding: 3% 5% 2%;
+    padding: 2% 2% 2%;
     position: relative;
     @media @desktop {
         margin: 0;
     }
     @media @tablet {
         margin: 0;
-        padding-top: 3em;
+        padding:1.5em 0 0 0;
     }
     .widget.menu {
         margin:0 auto;
@@ -733,11 +728,6 @@ div[role="main"] {
     } /* end .widget.menu */
 }
 
-.widget.logo img {
-    border: none;
-    max-width: 80%;
-}
-
 /* ===============================
    6. Footer
    =============================== */
@@ -748,7 +738,7 @@ div[role="main"] {
     text-align: center;
     width: 100%;
     h1 {
-        border-bottom: 2px solid fade(@color-swatch5, 25%);
+        border-bottom: 1px solid @color-swatch5;
         padding: 0 0 15px;
         margin-bottom: 30px;
     }
@@ -831,7 +821,7 @@ div[role="main"] {
 .blogsearch {
     form {
         button {
-            padding: 10px;
+            padding: 8px;
             color: @font-swatch7-color;
             font-size: @font-swatch6-font-size;
             font-weight: @font-swatch6-font-weight;
@@ -853,8 +843,10 @@ div[role="main"] {
     }
     .blog-search-submit-button {
         display: inline-block;
-        margin-left: 2%;
-        width: 15%;
+        width: 10%;
+        &:hover{
+            background-color:darken(@color-swatch3,10%);
+        }
         @media @mobile {
             width: 30%;
         }
@@ -960,8 +952,8 @@ div[role="main"] {
   =============================== */
 
   blockquote {
-    background-color: transparent;
-    margin: 20px;
+        background-color: transparent;
+        margin: 20px;
     &:before {
         color: @color-swatch3;
     }
@@ -1019,6 +1011,138 @@ button, .widget.button.paypal, .widget.tweet a {
 
 .widget.profile form button {
     padding-top: 8px;
+}
+
+/* ===============================
+   12. Feature
+   =============================== */
+
+.widget {
+    &.feature {
+        .feature-bgimg {
+            height: 100%;
+        }
+        .feature-bgimg .content {
+            padding: 15em 2em;
+            background-color:rgba(0, 0, 0, 0.5);
+            button.btn {
+                margin: 0px auto;
+                display: table;
+            }
+            @media @tablet {
+                padding: 8em 1em;
+            }
+            @media @mobile {
+                padding: 6em 1em;
+            }
+            h2 {
+                padding-bottom: 0.1em;
+                color: @font-swatch8-color;
+                font-family: @font-swatch8-font-family;
+                font-size: @font-swatch8-font-size; 
+                letter-spacing: @font-swatch8-letter-spacing;
+                line-height: @font-swatch8-line-height;
+                word-wrap: break-word;
+                @media @tablet {
+                    font-size: bkscale(@font-swatch8-font-size, 0.7);
+                    line-height: bkscale(@font-swatch8-line-height, 0.75);
+                }
+                span {
+                    padding-bottom: 0;
+                    margin: 0px auto;
+                    display: table;
+                    text-align:center;
+                }
+            }
+            h3  { 
+                color: @color-swatch7;
+                display: block;
+                font-family: @font-swatch9-font-family;
+                font-size: @font-swatch9-font-size; 
+                letter-spacing: bkscale(@font-swatch10-letter-spacing, 0.8);
+                line-height: @font-swatch5-line-height;
+                margin-bottom: 10px;
+                text-align: center;
+                @media @tablet {
+                    font-size: bkscale(@font-swatch5-font-size, 1.2);
+                    letter-spacing: bkscale(@font-swatch10-letter-spacing, 0.6);
+                    line-height: bkscale(@font-swatch5-line-height, 1.1);
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+}
+ 
+.widget {
+    &.feature {
+        display: table;
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+        height: 100%;
+        @media @tablet {
+            display:none;
+        .feature-bgimg {
+            display: table-row;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-position: center center;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+            min-height: 500px; /* height should be in the media query */
+            .content {
+                display: table-cell;
+                vertical-align: middle;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                .spare {
+                    display: block;
+                    margin: 0 auto;
+                    max-width: 1400px;
+                }
+            }
+        }
+    }
+}
+}
+
+/* ===============================
+   Custom CSS
+   =============================== */
+
+.nav-content {  
+    margin-top: 60px;
+    margin-bottom: 30px;
+    @media @tablet {
+        margin-top: 40px;
+    }
+        h5 {
+            color:@font-swatch8-color;
+            line-height:@font-swatch5-line-height;
+        }   
+}
+
+.widget.socialicons {
+    margin:0.5em 0;
+        span a {
+            background-color:transparent;
+    }
+}
+
+.menu-name-background {
+    background-color: @color-swatch3;
+    width: 30%;
+    margin: 0px auto;
+    display: table;
+    h1 {
+        color:white;
+        padding-bottom:0;
+        padding:15px;
+    }
 }
 
 /* ===============================

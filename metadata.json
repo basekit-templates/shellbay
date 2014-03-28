@@ -1,7 +1,7 @@
 {
-    "name":"Wisconsin",
-    "thumbnail":"wisconsin.png",
-    "screenshot":"wisconsin.png",
+    "name":"Shell bay",
+    "thumbnail":"shellbay.png",
+    "screenshot":"shellbay.png",
     "tags": {
     "en": ["minimal", "clean", "photography", "vintage", "modern", "dark", "studio", "website", "creative", "elegant", "professional", "unique", "media", "sans-serif"],
     "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif"],
@@ -12,9 +12,9 @@
         "Swatch 1": {
             "color1":"#FFFFFF",
             "color2":"#e1e1e1",
-            "color3":"#faa833",
+            "color3":"#d4222a",
             "color4":"#3c4a55",
-            "color5":"#012228",
+            "color5":"#000000",
             "color6":"#012228",
             "color7":"#ffffff"
         },
@@ -28,7 +28,7 @@
             "color7":"#ffffff"
         },
         "Swatch 3": {
-            "color1":"#f7f4e1",
+            "color1":"#ffffff",
             "color2":"#f7f4e1",
             "color3":"#E77E7E",
             "color4":"#3c4a55",
@@ -37,20 +37,20 @@
             "color7":"#ffffff"
         },
         "Swatch 4": {
-            "color1":"#f7f4e1",
-            "color2":"#f7f4e1",
+            "color1":"#ffffff",
+            "color2":"#841c2f",
             "color3":"#841c2f",
-            "color4":"#3c4a55",
-            "color5":"#3c4a55",
+            "color4":"#841c2f",
+            "color5":"#841c2f",
             "color6":"#9bd6cf",
             "color7":"#ffffff"
         },
         "Swatch 5": {
-            "color1":"#f7f4e1",
+            "color1":"#ffffff",
             "color2":"#f7f4e1",
-            "color3":"#841c2f",
+            "color3":"#4B6D50",
             "color4":"#3c4a55",
-            "color5":"#3c4a55",
+            "color5":"#4B6D50",
             "color6":"#9bd6cf",
             "color7":"#ffffff"
         }
@@ -58,15 +58,15 @@
     "fontSwatch": {
        "title": "Futura",
         "font1": {
-            "font-family": "\"Oswald\", Arial, sans-serif",
+            "font-family": "\"Vollkorn\", Georgia, serif",
             "font-size": "36px",
             "font-weight": "300",
             "line-height": "46px",
             "color": "@color-swatch3",
-            "letter-spacing": "inherit"
+            "letter-spacing": "5px"
         },
         "font2": {
-            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Vollkorn\", Georgia, serif",
             "font-size": "24px",
             "font-weight": "400",
             "line-height": "34px",
@@ -74,7 +74,7 @@
             "letter-spacing": "inherit"
         },
         "font3": {
-            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Vollkorn\", Georgia, serif",
             "font-size": "18px",
             "font-weight": "600",
             "line-height": "28px",
@@ -82,7 +82,7 @@
             "letter-spacing": "inherit"
         },
         "font4": {
-            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
+            "font-family": "\"Vollkorn\", Georgia, serif",
             "font-size": "15px",
             "font-weight": "400",
             "line-height": "24px",
@@ -90,7 +90,7 @@
             "letter-spacing": "inherit"
         },
         "font5": {
-            "font-family": "\"Futura\", Helvetica, sans-serif",
+            "font-family": "\"lato\", Helvetica, sans-serif",
             "font-size": "15px",
             "font-weight": "400",
             "line-height": "24px",
@@ -98,7 +98,7 @@
             "letter-spacing": "inherit"
         },
         "font6": {
-            "font-family": "\"Oswald\", Arial, sans-serif",
+            "font-family": "\"Vollkorn\", Georgia, serif",
             "font-size": "18px",
             "font-weight": "300",
             "line-height": "26px",
@@ -109,7 +109,7 @@
             "background-color-hover": "transparent"
         },
         "font7": {
-            "font-family": "\"Futura\", \"Helvetica\", sans-serif",
+            "font-family": "\"Vollkorn\", Georgia, serif",
             "font-size": "18px",
             "font-weight": "400",
             "line-height": "28px",
@@ -119,23 +119,23 @@
             "background-color-hover": "darken(@color-swatch3,5%)"
         },
         "font8": {
-            "font-family": "\"Futura\", \"Helvetica\", sans-serif",
-            "font-size": "18px",
+            "font-family": "\"Vollkorn\", Georgia, serif",
+            "font-size": "72px",
             "font-weight": "400",
-            "line-height": "28px",
-            "color": "@color-swatch5",
-            "letter-spacing": "inherit"
+            "line-height": "82px",
+            "color": "@color-swatch1",
+            "letter-spacing": "5px"
         },
         "font9": {
-            "font-family": "\"Futura\", \"Helvetica\", sans-serif",
-            "font-size": "18px",
+            "font-family": "\"Vollkorn\", Georgia, serif",
+            "font-size": "42x",
             "font-weight": "400",
-            "line-height": "28px",
-            "color": "@color-swatch5",
-            "letter-spacing": "inherit"
+            "line-height": "56px",
+            "color": "@color-swatch1",
+            "letter-spacing": "5px"
         },
         "font10": {
-            "font-family": "\"Oswald\", Arial, sans-serif",
+            "font-family": "\"Vollkorn\", Georgia, serif",
             "font-size": "30px",
             "font-weight": "300",
             "line-height": "42px",

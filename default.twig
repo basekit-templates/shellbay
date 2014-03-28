@@ -6,22 +6,23 @@
     <div class="three cols">
         <header class="bk-header">
             {{widget('logo', 'WISCONSIN-logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'WISCONSIN-bar', {"business": "profile"})|raw}}
-            {{widget('image', 'menu-feature', { 'src': asset('images/menu-feature.png'), 'imageWidth': '100%'})|raw}}
-            <nav class="text-center">
-            {% if pages|length > 1 %}
-                {{widget('extendednavigation', 'navigationheader', {})|raw}}
-            {% endif %}
+            {{widget('companyname', 'WISCONSIN-bar', {"business": "SHELL BAY"})|raw}}
+            <nav class="text-center clearfix">
+                {% if pages|length > 1 %}
+                    {{widget('extendednavigation', 'navigationheader', {})|raw}}
+                {% endif %}
             </nav>
         </header>
     </div>
-    <div role ="main" class="nine cols">
-        {{zone('main')|raw}}
-        <footer class="bk-footer">
-            {{widget('content', 'footer-header', {content: '<h1>Contact Us</h1>', lines: 'all'})|raw}}
-            {{widget('companyaddress', 'footer-address', {})|raw}}
-            {{widget('clicktocall', 'footer-phone', {phoneText: '0800 123 123'})|raw}}
-        </footer>
+    <div class="nine cols">
+        <div role ="main">
+            {{zone('main')|raw}}
+            <footer class="bk-footer">
+                {{widget('content', 'footer-header', {content: '<h1>Contact Us</h1>', lines: 'all'})|raw}}
+                {{widget('companyaddress', 'footer-address', {})|raw}}
+                {{widget('clicktocall', 'footer-phone', {phoneText: '0800 123 123'})|raw}}
+            </footer>
+        </div>
     </div>
 </div>
 
