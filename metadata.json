@@ -2,7 +2,6 @@
     "name":"Shell Bay",
     "thumbnail":"shellbay.png",
     "screenshot":"shellbay.png",
-    "templateType":"menu",
     "pageTypes": [
         "home",
         "default"
