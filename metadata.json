@@ -2,11 +2,14 @@
     "name":"Shell Bay",
     "thumbnail":"shellbay.png",
     "screenshot":"shellbay.png",
+<<<<<<< HEAD
     "templateType":"menu",
     "pageTypes": [
         "home",
         "default"
     ],
+=======
+>>>>>>> 35d5a431c319c007823801ae6244bd310a91126a
     "tags": {
     "en": ["minimal", "clean", "food", "sidebar", "modern", "dark", "restaurant", "website", "menu", "elegant", "professional", "unique", "media", "sans-serif"],
     "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif"],
