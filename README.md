@@ -1,5 +1,5 @@
 
-Wisconsin
+Shell Bay
 ========
 
-Wisconsin menu template
+Shell Bay menu template

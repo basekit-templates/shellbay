@@ -512,7 +512,7 @@ div[role="main"] {
                         display:block;
                         position: relative;
                         &.menu-item-promoted { /* menu-item-promoted */
-                            background-color: fade(@color-swatch5, 8%);
+                            background-color: fade(@color-swatch5, 16%);
                             border-radius: 6px;
                             -moz-border-radius: 6px;
                             -webkit-border-radius: 6px;
@@ -1233,33 +1233,4 @@ button, .widget.button.paypal, .widget.tweet a {
     &.gallery {
         margin-left: 0;
     }
-}
-
-/* Select Fix */
-
-select::-ms-expand {
-    display: none;
-}
- .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
-    select {
-        -moz-appearance: none;
-        text-indent: 0.01px
-        ;
-        text-overflow: '';
-}
-
-.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
-.widget.ecomcheckout .delivery select,
-select {
-    cursor: pointer;
-    -webkit-appearance: none;
-    -webkit-border-radius: 0;
-    position: relative;
-    background-image: image('/images/arrow.png');
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-    background-position-x: 95%;
-    background-position-y: 53%;
-    margin-bottom: 12px;
-    padding-right: 33px;
 }
