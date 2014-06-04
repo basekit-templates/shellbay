@@ -253,7 +253,7 @@ nav {
                         font-family: @font-swatch6-font-family;
                         font-size: @font-swatch6-font-size;
                         font-weight: @font-swatch6-font-weight;
-                        color: fade(@color-swatch7, 30%);
+                        color: @color-swatch7;
                         line-height: @font-swatch6-line-height;
                         letter-spacing: @font-swatch6-letter-spacing;
                         &:hover {
@@ -268,7 +268,7 @@ nav {
                         cursor: pointer;
                         background-image: none;
                         .text {
-                            color: fade(@color-swatch7, 30%);
+                            color: @color-swatch7;
                             display: block;
                             padding: 15px 15px;
                             font-family: @font-swatch6-font-family;
@@ -833,7 +833,6 @@ div[role="main"] {
     }
     input {
         display: inline-block;
-        height: 42px;
         width: 80%;
         @media @mobile {
             width: 65%;
@@ -999,16 +998,8 @@ button, .widget.button.paypal, .widget.tweet a {
     -webkit-font-smoothing: antialiased !important;
 }
 
-.signupform fieldset button, fieldset button {
-    height: 45px;
-}
-
 .signupform fieldset input {
     width: 70%;
-}
-
-.widget.profile form button {
-    padding-top: 8px;
 }
 
 /* ===============================
@@ -1125,10 +1116,14 @@ button, .widget.button.paypal, .widget.tweet a {
         }   
 }
 
-.widget.socialicons {
+.bk-header .widget.socialicons {
     margin:0.5em 0;
-        span a {
-            background-color:transparent;
+    span a {
+        background-color: transparent;
+        &:hover {
+            background-color: @font-swatch7-background-color;
+            transition: all .5s ease;
+        }
     }
 }
 
@@ -1144,45 +1139,127 @@ button, .widget.button.paypal, .widget.tweet a {
     }
 }
 
-/* ===============================
-   PRINT STYLES 
-   =============================== */
-.print-mixin {
-    .three, .row .three {
-	    width: 100%;
-	    .widget.image {
-		    display: none;
-	    }
+/* Forms */
+
+.widget {
+    &.button {
+        button {
+            padding: 10px 14px 8px;
+            height: 45px;
+        }
     }
-    [class*="col"] + [class*="col"]:last-child {
-	    float: none;
+    &.contactform {
+        input, textarea {
+            border: 1px solid fade(@color-swatch5, 25%);
+            &.email {
+                @media @mobile {
+                    width: 70%;
+                }
+            }
+        }
+        button {
+            height: 45px;
+            padding: 10px 14px 8px;
+        }
     }
-    .nine, .row .nine {
-	    width: 100%;
+    &.profile {
+        form fieldset input {
+            background-color: @font-swatch6-background-color;
+            border: 1px solid fade(@color-swatch5, 25%);
+            height: 45px;
+        }
+        button {
+            padding: 12px 14px 8px;
+        }
     }
-    .menu-subsection-promoted,
-    .menu-item-promoted {
-	    border: 1px solid #b9b9b9 !important;
+    &.signupform fieldset {
+        button {
+            height: 45px;
+            padding: 12px 14px 8px;
+            position: relative;
+        }
+        input {
+            border: 1px solid fade(@color-swatch5, 25%);
+            width: 50%;
+            @media @tablet {
+                width: 65%;
+            }
+            @media @mobile {
+                width: 70%;
+            }
+        }
     }
-    .bk-header {
-	    width: 100%;
-	    position: relative;
+    &.blogsearch {
+        input {
+            border: 1px solid fade(@color-swatch5, 25%);
+            height: 45px;
+            @media @mobile {
+                width: 50%;
+            }
+        }
+        button {
+            background-color: @font-swatch7-background-color;
+            border: 0;
+            font-family: @font-swatch7-font-family;
+            font-size: @font-swatch7-font-size;
+            font-weight: @font-swatch7-font-weight;
+            color: @font-swatch7-color;
+            letter-spacing: inherit;
+            padding: 12px 14px 8px;
+            margin: 1em 0;
+            text-decoration: none;
+            height: 45px;
+            position: relative;
+        }
     }
-    .nine.cols {
-	    margin: 0 auto;
-    }
-    div[role="main"] .widget.menu .main .menu-subsection .menu-subsection-promoted:before {
-	    display: none;
+    input, button {
+        vertical-align: middle;
     }
 }
- 
-@media print {
-	body {
-		border: none !important;
-	}
-    .print-mixin;
+
+/* Misc */ 
+
+.widget {
+    .socialicons span a {
+        -moz-border-radius: 50px;
+        -webkit-border-radius: 50px;
+        border-radius: 50px;
+    }
+    &.line {
+        hr.line {
+            background-color: lighten(@color-swatch5, 50%);
+        }
+    }
+    &.gallery {
+        margin-left: 0;
+    }
 }
- 
-.bk-print {
-    .print-mixin;
+
+/* Select Fix */
+
+select::-ms-expand {
+    display: none;
+}
+ .widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
+    select {
+        -moz-appearance: none;
+        text-indent: 0.01px
+        ;
+        text-overflow: '';
+}
+
+.widget.ecomproduct .ecom-product .ecom-product-info .ecom-product-variation select,
+.widget.ecomcheckout .delivery select,
+select {
+    cursor: pointer;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+    position: relative;
+    background-image: image('/images/arrow.png');
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-position-x: 95%;
+    background-position-y: 53%;
+    margin-bottom: 12px;
+    padding-right: 33px;
 }
