@@ -175,6 +175,7 @@ nav {
                 margin: 0;
             }
             li {
+                white-space: normal;
                 ul {
                     display: none;
                 }
@@ -182,9 +183,16 @@ nav {
             ul {
                 display: table;
                 margin: 0;
-                text-align: left;
                 padding: 0;
                 width: 100%;
+
+                &.align-right {
+                   li.folder:after {
+                    right: auto;
+                    left: 6px;
+                   } 
+                }
+
                 @media @tablet {
                     /* Hidden until nav icon is clicked */
                     display: none;
@@ -259,9 +267,9 @@ nav {
                         cursor: pointer;
                         background-image: none;
                         .text {
-                            color: @color-swatch7;
+                            color: @font-swatch6-color;
                             display: block;
-                            padding: 15px 15px;
+                            padding: 15px;
                             font-family: @font-swatch6-font-family;
                             font-size: @font-swatch6-font-size;
                             font-weight: @font-swatch6-font-weight;
@@ -278,17 +286,17 @@ nav {
                             }
                         }
                         &:after {
-                                font-size: 9px;
-                                position: absolute;
-                                top: 28px;
-                                z-index: 9999999;
-                                right: 30px;
-                                border-top-color: fade(@color-swatch7, 30%);
-                                @media @tablet {
-                                    font-size: 10px;
-                                    color: @color-swatch5;
-                                }
+                            font-size: 9px;
+                            position: absolute;
+                            top: 28px;
+                            z-index: 9999999;
+                            right: 6px;
+                            border-top-color: fade(@font-swatch6-color, 30%);
+                            @media @tablet {
+                                font-size: 10px;
+                                color: @color-swatch5;
                             }
+                        }
                         ul {
                             border: none;
                             padding: 0;
