@@ -104,7 +104,7 @@
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "26px",
-            "color": "@color-swatch5",
+            "color": "@color-swatch7",
             "color-hover": "darken(@color-swatch5,10%)",
             "letter-spacing": "2px",
             "background-color": "transparent",
