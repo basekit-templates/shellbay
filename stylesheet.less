@@ -1099,6 +1099,9 @@ fieldset {
 
 button, .widget.button.paypal, .widget.tweet a {
     -webkit-font-smoothing: antialiased !important;
+    &:hover {
+        background-color: @font-swatch7-background-color-hover;
+    }
 }
 
 .signupform fieldset input {
@@ -1335,5 +1338,59 @@ button, .widget.button.paypal, .widget.tweet a {
     }
     &.gallery {
         margin-left: 0;
+    }
+}
+
+/* ===============================
+   GALLERY WIDGET
+   =============================== */
+
+.widget.gallery {
+    width: 101%;
+    margin: 20px 0 20px -0.5%;
+    ul li {
+        @media @tablet {
+            width: 50%;
+            padding-bottom: 50%;
+        }
+        @media @mobile {
+            width: 100%;
+            padding-bottom: 100%;
+        }
+        span.inner {
+            .title,
+            .description {
+                // Font
+                text-align: left;
+            }
+            .title {
+                font-size: 19px;
+                font-weight: 600;
+                line-height: 29px;
+                color: @font-swatch4-color;
+                font-family: @font-swatch4-font-family;
+                letter-spacing: @font-swatch4-letter-spacing;
+            }
+            .description {
+                font-size: 13px;
+                line-height: 23px;
+                color: @font-swatch5-color;
+                font-family: @font-swatch5-font-family;
+                letter-spacing: @font-swatch5-letter-spacing;
+            }
+        }
+    }
+    // Image Data
+    .image-data {
+        display: block;
+        opacity: 0;
+        background-color: darken(@color-swatch1,5%);
+        -webkit-transition: all 0.4s ease-out;
+        -moz-transition: all 0.4s ease-out;
+        -o-transition: all 0.4s ease-out;
+        transition: all 0.4s ease-out;
+        &:hover {
+            opacity: 1;
+        }
     }
 }
