@@ -362,6 +362,21 @@ nav {
     }
 }
 
+
+/* Selected state */
+
+.extendednavigation ul li.folder.selected ul li .text {
+    background: lighten(@color-swatch5, 10%);
+    color: @color-swatch1;
+}
+
+.extendednavigation ul li.selected, .extendednavigation ul li:hover ul li.selected, .extendednavigation ul li.folder.selected ul li.selected, .extendednavigation ul li.folder.selected {
+    a, .text {
+        background: lighten(@color-swatch5, 10%);
+        color: @color-swatch1;
+    }
+}
+
 /* ===============================
    MENU SECTIONS
    =============================== */
