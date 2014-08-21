@@ -362,67 +362,77 @@ nav {
     }
 }
 
-.widget.menusections {
-    margin: 0;
-    ul {
-        display: block;
-        list-style: none;
-        padding: 2.5em 0 0 0;
-        margin: 0;
-        max-width: 100%;
-        text-align: center;
-        @media @tablet{
-            width: 100%;
-            margin: 0 0 0 0;
-            padding: 1em 0 0 0;
+/* ===============================
+   MENU SECTIONS
+   =============================== */
+
+.widget {
+    &.menusections {
+        margin:2em 0 0.5em;
+        @media @tablet {
+            border: none;
+            margin: 2em 0 1em;
         }
-        li {
-            padding: 0.8em 0;
+        ul {
+            text-align: center;
             margin: 0;
+            display: block;
             @media @tablet {
-                padding: 0.8em 0 1em;
                 width: 100%;
-                margin: 0;
+                border-top: 2px solid fade(@color-swatch5, 20%);
+                border-bottom: 2px solid fade(@color-swatch5, 20%);
+                padding: 0.25em 0;
+                margin: 1.5em auto;
             }
-            &:first-child a {
-                padding-left: 0;
-                @media @tablet {
-                    padding: 0;
+            li {
+                margin: 0 0.5em;
+                &:first-child {
+                    margin-left: 0;
+                    @media @mobile {
+                        margin: 0;
+                    }
+                    a {
+                        @media only screen and (max-width: 1024px) {
+                            padding-left: 0;
+                        }
+                    }
                 }
-            }
-            a {
-                display: block;
-                font-family: @font-swatch6-font-family;
-                font-size: @font-swatch6-font-size;
-                font-weight: @font-swatch6-font-weight;
-                color: @color-swatch6;
-                letter-spacing: @font-swatch6-letter-spacing;
-                padding: 0 15px;
-                &:hover {
-                    color: @color-swatch3;
-                    text-decoration: none;
-                }
-            }
-        }
-    }
-    a {
-        &.menu-pull {
-            display: none;
-            color: @color-swatch7;
-            min-height: 60px;
-            @media @tablet {
-                &:after {
-                    display: block;
-                    font-family: @font-swatch4-font-family;
-                    height: 65px;
-                    width: 100%;
+                a {
+                    font-family:@font-swatch6-font-family;
+                    font-size:@font-swatch6-font-size;
+                    font-weight: @font-swatch6-font-weight;
+                    color: @font-swatch5-color;
+                    line-height:@font-swatch6-line-height;
+                    letter-spacing: @font-swatch6-letter-spacing;
                     &:hover {
+                        color: @color-swatch3;
                         text-decoration: none;
+                    }
+                    &:after {
+                        content: "\25CF";
+                        color: fade(@color-swatch5,20%);
+                        padding-left: 1.5em;
+                        position: relative;
+                        @media @tablet {
+                            display: none;
+                        }
+                    }
+                }
+                @media only screen and (max-width: 768px) {
+                    border-bottom: 1px solid fade(@color-swatch5, 20%);
+                    margin: 0;
+                    width: 100%;
+                    padding: 1em 0;
+                }
+                &:last-child {
+                    border-bottom: 0;
+                    a:after {
+                        display: none;
                     }
                 }
             }
         }
-    }
+    }  /* end menu sections */
 }
 
 
