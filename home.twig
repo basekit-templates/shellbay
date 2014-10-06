@@ -5,8 +5,8 @@
 <div class="row">
     <div class="three cols">
         <header class="bk-header">
-            {{widget('logo', 'WISCONSIN-logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'WISCONSIN-bar', {"business": "profile"})|raw}}
+            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+            {{widget('companyname', 'bar', {"align":"center"}, {"business": "profile"})|raw}}
             <nav class="text-center clearfix">
                 {% if pages|length > 1 %}
                     {{widget('extendednavigation', 'navigationheader', {})|raw}}
@@ -22,7 +22,7 @@
       {{widget('feature', 'featurehome', {"header": "profile", "strapline":"profile", "buttonText":"Lorem Ipsum","defaultBgImg": asset('images/feature-bg.jpg'), 'positionTopPercentage': '50','showBtn': true})|raw}}
             {{zone('main')|raw}}
             <footer class="bk-footer">
-                {{widget('content', 'footer-header', {content: '<h1>Contact Us</h1>', lines: 'all'})|raw}}
+                {{widget('content', 'footer-header', {content: '<h1>Lorem Ipsum</h1>', lines: 'all'})|raw}}
                 {{widget('companyaddress', 'footer-address', {})|raw}}
                 {{widget('clicktocall', 'footer-phone', {phoneText: '0800 123 123'})|raw}}
             </footer>

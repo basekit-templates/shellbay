@@ -3,19 +3,16 @@
     "thumbnail":"shellbay.png",
     "screenshot":"shellbay.png",
     "templateType":"menu",
-    "pageTypes": [
-        "home",
-        "default"
-    ],
+    
     "tags": {
-    "en": ["minimal", "clean", "food", "sidebar", "modern", "dark", "restaurant", "website", "menu", "elegant", "professional", "unique", "media", "sans-serif"],
-    "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif"],
-    "br": ["minimalista", "limpo", "fotografia", "vintage", "moderno", "escuro", "estúdio", "website", "criativo", "elegante", "profissional", "único", "mídia", "sans-serif"]
+        "en": ["minimal", "clean", "photography", "vintage", "modern", "dark", "studio", "website", "creative", "elegant", "professional", "unique", "media", "sans-serif"],
+        "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif"],
+        "br": ["minimalista", "limpo", "fotografia", "vintage", "moderno", "escuro", "estúdio", "website", "criativo", "elegante", "profissional", "único", "mídia", "sans-serif"]
     },
     "colorSwatches":
     {
         "Swatch 1": {
-            "color1":"#FFFFFF",
+            "color1":"#ffffff",
             "color2":"#e1e1e1",
             "color3":"#d4222a",
             "color4":"#3c4a55",
@@ -66,7 +63,7 @@
             "font-family": "\"Vollkorn\", Georgia, serif",
             "font-size": "36px",
             "font-weight": "400",
-            "line-height": "46px",
+            "line-height": "45px",
             "color": "@color-swatch3",
             "letter-spacing": "5px"
         },
@@ -95,7 +92,7 @@
             "letter-spacing": "inherit"
         },
         "font5": {
-            "font-family": "\"lato\", Helvetica, sans-serif",
+            "font-family": "\"Lato\", Geneva, Tahoma, sans-serif",
             "font-size": "15px",
             "font-weight": "400",
             "line-height": "24px",
@@ -107,8 +104,8 @@
             "font-size": "16px",
             "font-weight": "400",
             "line-height": "26px",
-            "color": "@color-swatch5",
-            "color-hover": "@color-swatch5",
+            "color": "@color-swatch7",
+            "color-hover": "darken(@color-swatch5,10%)",
             "letter-spacing": "2px",
             "background-color": "transparent",
             "background-color-hover": "transparent"
@@ -133,7 +130,7 @@
         },
         "font9": {
             "font-family": "\"Vollkorn\", Georgia, serif",
-            "font-size": "42x",
+            "font-size": "42px",
             "font-weight": "400",
             "line-height": "56px",
             "color": "@color-swatch1",
