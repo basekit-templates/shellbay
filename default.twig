@@ -2,29 +2,33 @@
 
 {% block content %}
 
-<div class="row">
-    <div class="three cols">
-        <header class="bk-header">
-            {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
-            {{widget('companyname', 'bar', {"align":"center"}, {"business": "profile"})|raw}}
-            <nav class="text-center clearfix">
-                {% if pages|length > 1 %}
-                    {{widget('extendednavigation', 'navigationheader', {})|raw}}
-                {% endif %}
-            </nav>
-            <div class="nav-content">
-            {{widget('socialicons', 'social-icons', {'googleplus': 'https://plus.google.com/101946323226233111530', 'linkedin':'http://www.linkedin.com/company/basekit', 'facebook': 'https://www.facebook.com/TeamBaseKit', 'twitter': 'https://twitter.com/basekit', 'youtube': 'https://www.youtube.com/user/TeamBaseKit', 'rss': 'http://blogdiseno.basekit.es/feed/'})|raw}}
+<div class="bk-default">
+    <div class="row">
+        <div class="three cols">
+            <header class="bk-header">
+                {{widget('logo', 'logo', {"defaultlogo": asset('images/logo.png')})|raw}}
+                {{widget('companyname', 'bar', {"align":"center"}, {"business": "profile"})|raw}}
+                <nav class="text-center clearfix">
+                    {% if pages|length > 1 %}
+                        {{widget('extendednavigation', 'navigationheader', {})|raw}}
+                    {% endif %}
+                </nav>
+                <div class="nav-content">
+                {{widget('socialicons', 'social-icons', {'googleplus': 'https://plus.google.com/101946323226233111530',     'linkedin':'http://www.linkedin.com/company/basekit', 'facebook': 'https://www.facebook.com/TeamBaseKit', 'twitter':    'https://twitter.com/basekit', 'youtube': 'https://www.youtube.com/user/TeamBaseKit', 'rss': 'http://blogdiseno.   basekit.es/feed/'})|raw}}
+                </div>
+            </header>
+        </div>
+        <div class="page-wrap">
+            <div class="nine cols">
+                <div role ="main">
+                {{zone('main')|raw}}
+                    <footer class="bk-footer">
+                        {{widget('content', 'footer-header', {content: '<h1>Lorem Ipsum</h1>', lines: 'all'})|raw}}
+                        {{widget('companyaddress', 'footer-address', {})|raw}}
+                        {{widget('clicktocall', 'footer-phone', {phoneText: '0800 123 123'})|raw}}
+                    </footer>
+                </div>
             </div>
-        </header>
-    </div>
-    <div class="nine cols">
-        <div role ="main">
-        {{zone('main')|raw}}
-            <footer class="bk-footer">
-                {{widget('content', 'footer-header', {content: '<h1>Lorem Ipsum</h1>', lines: 'all'})|raw}}
-                {{widget('companyaddress', 'footer-address', {})|raw}}
-                {{widget('clicktocall', 'footer-phone', {phoneText: '0800 123 123'})|raw}}
-            </footer>
         </div>
     </div>
 </div>
