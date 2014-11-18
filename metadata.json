@@ -3,12 +3,15 @@
     "thumbnail":"shellbay.png",
     "screenshot":"shellbay.png",
     "templateType":"menu",
-    
+    "pageTypes": ["home"],
     "tags": {
         "en": ["minimal", "clean", "photography", "vintage", "modern", "dark", "studio", "website", "creative", "elegant", "professional", "unique", "media", "sans-serif"],
         "es": ["minimalista", "limpio", "fotografico", "vintage", "moderno", "oscuro", "estudio", "website", "creativo", "elegante", "profesional", "unico", "comunicacion", "sans-serif"],
         "br": ["minimalista", "limpo", "fotografia", "vintage", "moderno", "escuro", "estúdio", "website", "criativo", "elegante", "profissional", "único", "mídia", "sans-serif"]
     },
+    "images":[
+        "images/feature-bg.jpg"
+    ],
     "colorSwatches":
     {
         "Swatch 1": {
@@ -21,11 +24,11 @@
             "color7":"#ffffff"
         },
         "Swatch 2": {
-            "color1":"#f7f4e1",
+            "color1":"#ffffff",
             "color2":"#f7f4e1",
-            "color3":"#841c2f",
-            "color4":"#3c4a55",
-            "color5":"#3c4a55",
+            "color3":"#643F2F",
+            "color4":"#643F2F",
+            "color5":"#643F2F",
             "color6":"#E77E7E",
             "color7":"#ffffff"
         },
@@ -50,9 +53,9 @@
         "Swatch 5": {
             "color1":"#ffffff",
             "color2":"#f7f4e1",
-            "color3":"#4B6D50",
+            "color3":"#768E57",
             "color4":"#3c4a55",
-            "color5":"#4B6D50",
+            "color5":"#768E57",
             "color6":"#9bd6cf",
             "color7":"#ffffff"
         }

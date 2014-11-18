@@ -116,7 +116,7 @@ h5 {
    4. Header
    =============================== */
 
-.bk-header {
+header.bk-header {
     background-color: @color-swatch5;
     height: 100%;
     overflow-x: scroll;
@@ -124,7 +124,7 @@ h5 {
     position: fixed;
     text-align: center;
     min-width: 200px;
-    width: 20%;
+    width: 25%;
     z-index: 9999;
     @media @tablet {
         padding: 3em 1.5em 0;
@@ -310,7 +310,7 @@ nav {
                                 left: 0;
                             }
                             li {
-                                background: @color-swatch5;
+                                background: lighten(@color-swatch5, 10%);
                                 border-right: none;
                                 border-left: none;
                                 margin-right: 0;
@@ -759,9 +759,8 @@ div[role="main"] {
    6. Footer
    =============================== */
 
-.bk-footer {
+footer.bk-footer {
     margin: 1.5em 0 3em;
-    padding: 0 60px;
     text-align: center;
     width: 100%;
     h1 {
@@ -913,6 +912,14 @@ div[role="main"] {
     }
 }
 
+  /* ===============================
+   TWITTER FULL
+   =============================== */
+
+.widget.twitter .twitter-content span.bk-full-name {
+    line-height:60px;
+}
+
 /* ===============================
    8. Slideshow
    =============================== */
@@ -1056,6 +1063,10 @@ button, .widget.button.paypal, .widget.tweet a {
 
 .signupform fieldset input {
     width: 70%;
+}
+
+.widget.dropbox button, .widget.paypalbuynow .widget.button.paypal {
+    margin:0;
 }
 
 /* ===============================
@@ -1205,8 +1216,12 @@ button, .widget.button.paypal, .widget.tweet a {
         }
     }
     &.contactform {
+        label {
+            padding-top:10px;
+        }
         input, textarea {
             border: 1px solid fade(@color-swatch5, 25%);
+            padding-top:10px;
             &.email {
                 @media @mobile {
                     width: 70%;
@@ -1216,6 +1231,7 @@ button, .widget.button.paypal, .widget.tweet a {
         button {
             height: 45px;
             padding: 10px 14px 8px;
+            margin-top:10px;
         }
     }
     &.profile {
@@ -1272,6 +1288,10 @@ button, .widget.button.paypal, .widget.tweet a {
     input, button {
         vertical-align: middle;
     }
+}
+
+.widget.contactform textarea {
+    height:150px;
 }
 
 /* Misc */ 
